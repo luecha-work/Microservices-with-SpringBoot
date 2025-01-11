@@ -27,9 +27,12 @@
         <url/>
     </scm>
     <properties>
-        <java.version>23</java.version>
+        <java.version>17</java.version>
         <org.mapstruct.version>1.6.3</org.mapstruct.version>
         <packaging>jar</packaging>
+
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
@@ -115,11 +118,8 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>3.3.2</version>
                 <configuration>
-                    <from>
-                        <image>openjdk:23-jdk-slim</image>
-                    </from>
                     <to>
-                        <image>workshop-springboot/${project.artifactId}:${project.version}</image>
+                        <image>lkanmaneekul/${project.artifactId}:${project.version}</image>
                     </to>
                 </configuration>
             </plugin>
