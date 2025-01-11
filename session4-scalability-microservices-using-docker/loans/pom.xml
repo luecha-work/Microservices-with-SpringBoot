@@ -101,7 +101,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>workshop-springboot/${project.artifactId}:s4</name>
+                        <name>workshop-springboot/${project.artifactId}:${project.version}</name>
                     </image>
                     <excludes>
                         <exclude>
