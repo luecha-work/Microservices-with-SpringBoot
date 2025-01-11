@@ -17,11 +17,11 @@ Create a new Spring Boot project by visiting [Spring Initializr](https://start.s
 
 Add the `@RestController` annotation to the class to declare it as a Controller.
 
-## Build Container with Dockerfile (for Project: Account)
+## Build Container with Dockerfile (for Project: accounts)
 
-1. Build Image with: docker build . -t {YOUR_REPO_HUB}/account:0.0.1-SNAPSHOT
+1. Build Image with: docker build . -t {YOUR_REPO_HUB}/accounts:0.0.1-SNAPSHOT
 
-2. Run Image with: docker run -d -p 8080:8080 --name account-container {YOUR_REPO_HUB}/account:0.0.1-SNAPSHOT
+2. Run Image with: docker run -d -p 8080:8080 --name accounts-container {YOUR_REPO_HUB}/accounts:0.0.1-SNAPSHOT
 
 ## Build Container with Buildpacks.io (for Project: Loans)
 
@@ -29,7 +29,7 @@ Add the `@RestController` annotation to the class to declare it as a Controller.
 
 ```
 <image>
-    <name>lkanmaneekul/${project.artifactId}:${project.version}</name>
+    <name>{YOUR_REPO_HUB}/${project.artifactId}:${project.version}</name>
 </image>
 ```
 
@@ -48,7 +48,7 @@ Add the `@RestController` annotation to the class to declare it as a Controller.
     <version>3.3.2</version>
     <configuration>
         <to>
-            <image>lkanmaneekul/${project.artifactId}:${project.version}</image>
+            <image>{YOUR_REPO_HUB}/${project.artifactId}:${project.version}</image>
         </to>
     </configuration>
 </plugin>
