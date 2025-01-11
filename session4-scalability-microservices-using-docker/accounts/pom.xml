@@ -29,6 +29,7 @@
     <properties>
         <java.version>23</java.version>
         <org.mapstruct.version>1.6.3</org.mapstruct.version>
+        <packaging>jar</packaging>
     </properties>
     <dependencies>
         <dependency>
@@ -59,12 +60,6 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.projectlombok</groupId>-->
-        <!--            <artifactId>lombok</artifactId>-->
-        <!--            <optional>true</optional>-->
-        <!--        </dependency>-->
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
