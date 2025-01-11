@@ -29,6 +29,7 @@
     <properties>
         <java.version>23</java.version>
         <org.mapstruct.version>1.6.3</org.mapstruct.version>
+        <packaging>jar</packaging>
     </properties>
     <dependencies>
         <dependency>
@@ -99,6 +100,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <image>
+                        <name>workshop-springboot/${project.artifactId}:s4</name>
+                    </image>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
