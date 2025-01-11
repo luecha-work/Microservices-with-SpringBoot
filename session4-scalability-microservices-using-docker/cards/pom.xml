@@ -29,6 +29,7 @@
     <properties>
         <java.version>23</java.version>
         <org.mapstruct.version>1.6.3</org.mapstruct.version>
+        <packaging>jar</packaging>
     </properties>
     <dependencies>
         <dependency>
@@ -59,11 +60,6 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--            <optional>true</optional>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -112,6 +108,19 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:23-jdk-slim</image>
+                    </from>
+                    <to>
+                        <image>workshop-springboot/${project.artifactId}:${project.version}</image>
+                    </to>
                 </configuration>
             </plugin>
         </plugins>
