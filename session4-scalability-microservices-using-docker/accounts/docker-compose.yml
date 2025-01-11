@@ -12,8 +12,8 @@ services:
       - eazybank
 
   loads:
-    image: lkanmaneekul/loads:0.0.1-SNAPSHOT
-    container_name: loads-ms
+    image: lkanmaneekul/loans:0.0.1-SNAPSHOT
+    container_name: loans-ms
     ports:
       - "8090:8090"
     deploy:

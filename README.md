@@ -56,3 +56,7 @@ Add the `@RestController` annotation to the class to declare it as a Controller.
 
 2. Build Docker Image with Jib: mvn compile jib:dockerBuild
 3. Build Container and Run: docker run -d -p 9000:9000 --name cards-container {YOUR_REPO_HUB}/cards:0.0.1-SNAPSHOT
+
+## Push image to Docker Hub Repository 
+
+docker image push docker.io/{YOUR_REPO_HUB}/ImageName:Tag
