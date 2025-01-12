@@ -5,7 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Schema(name = "ResponseDto", description = "Data Transfer Object for Response")
-@Data @AllArgsConstructor
+@Data
+@AllArgsConstructor
 public class ResponseDto {
     @Schema(
             description = "Status code of the response"

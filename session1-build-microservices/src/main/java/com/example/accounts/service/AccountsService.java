@@ -31,14 +31,17 @@ public class AccountsService implements IAccountsService {
     public void createAccounts(CustomerDto customerDto) {
         Customer customer = customerMapper.mapToCustomer(customerDto);
 
+        System.out.println("customerDto = " + customerDto);
+        System.out.println("customer = " + customer);
+
         customerRepository.findByMobileNumber(customer.getMobileNumber());
 
         if (customerRepository.findByMobileNumber(customer.getMobileNumber()).isPresent()) {
             throw new CustomerAlreadyExistsException("Customer with mobile number " + customer.getMobileNumber() + " already exists");
         }
 
-//        customer.setCreatedBy("System");
-//        customer.setCreatedAt(LocalDateTime.now());
+        customer.setCreatedBy("System");
+        customer.setCreatedAt(LocalDateTime.now());
         Customer savedCustomer = customerRepository.save(customer);
         accountsRepository.save(createNewAccount(savedCustomer));
     }
