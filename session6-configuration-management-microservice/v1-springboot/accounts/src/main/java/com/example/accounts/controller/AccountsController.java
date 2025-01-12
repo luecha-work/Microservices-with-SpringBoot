@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -29,13 +30,10 @@ import org.springframework.web.bind.annotation.*;
 @Validated
 public class AccountsController {
 
-    private IAccountsService accountsService;
+    private final IAccountsService accountsService;
 
-    private String buildVersion;
-
-//    public AccountsController(IAccountsService accountsService) {
-//        this.accountsService = accountsService;
-//    }
+//    @Value("${build.version}")
+//    private final String buildVersion;
 
     @Operation(
             summary = "Create Account REST API",
@@ -132,4 +130,11 @@ public class AccountsController {
 
         return ResponseEntity.status(status).body(new ResponseDto(statusCode, message));
     }
+
+//    @GetMapping("/build-info")
+//    public ResponseEntity<String> getBuildInfo() {
+//        return ResponseEntity
+//                .status(HttpStatus.OK)
+//                .body(buildVersion);
+//    }
 }
