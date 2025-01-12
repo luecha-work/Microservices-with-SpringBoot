@@ -1,5 +1,5 @@
 # Start with a base image containing Java runtime
-FROM openjdk:23-jdk-slim
+FROM openjdk:17-jdk-slim
 
 # Information about the maintainer image
 MAINTAINER workshop-springoot-account.com

@@ -29,6 +29,7 @@
     <properties>
         <java.version>17</java.version>
         <org.mapstruct.version>1.6.3</org.mapstruct.version>
+        <packaging>jar</packaging>
     </properties>
     <dependencies>
         <dependency>
@@ -111,6 +112,16 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <to>
+                        <image>lkanmaneekul/${project.artifactId}:${project.version}</image>
+                    </to>
                 </configuration>
             </plugin>
         </plugins>
