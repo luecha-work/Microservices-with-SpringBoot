@@ -1,0 +1,40 @@
+services:
+  accounts:
+    image: lkanmaneekul/accounts:0.0.1-SNAPSHOT
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700M
+    networks:
+      - eazybank
+
+  loads:
+    image: lkanmaneekul/loans:0.0.1-SNAPSHOT
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700M
+    networks:
+      - eazybank
+
+  cards:
+    image: lkanmaneekul/cards:0.0.1-SNAPSHOT
+    container_name: cards-ms
+    ports:
+      - "9000:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 700M
+    networks:
+      - eazybank
+
+networks:
+    eazybank:
+        driver: "bridge"
