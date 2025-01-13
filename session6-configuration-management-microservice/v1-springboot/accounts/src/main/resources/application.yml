@@ -9,7 +9,7 @@ springdoc:
 
 spring:
   application:
-    name: account
+    name: accounts
   datasource:
     url: jdbc:h2:mem:testdb
     username: root
@@ -26,3 +26,12 @@ spring:
 
 build:
   version: "1.0"
+
+accounts:
+  message: "Welcome to Workshop Spring-Boot related to Accounts Microservice"
+  contactDetails:
+    name: "Luecha Kanmaneekul - Developer"
+    email: "luecha@gmail.com"
+  onCallSupport:
+    - 091-234-5678
+    - 092-345-6789
