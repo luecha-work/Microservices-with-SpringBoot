@@ -1,0 +1,17 @@
+
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to Workshop Spring-Boot related to Accounts related QA APIs"
+  contactDetails:
+    name: "Somsee rugna - QA Lead"
+    email: "Somsee@gmail.com"
+  onCallSupport:
+    - 091-234-5678
+    - 092-345-6789
