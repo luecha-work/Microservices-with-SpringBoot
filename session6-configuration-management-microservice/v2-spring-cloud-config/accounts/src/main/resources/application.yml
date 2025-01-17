@@ -35,10 +35,10 @@ build:
   version: "3.0"
 
 accounts:
-  message: "Welcome to Workshop Spring-Boot related to Accounts Microservice"
+  message: "Welcome to EazyBank accounts related local APIs "
   contactDetails:
-    name: "Luecha Kanmaneekul - Developer"
-    email: "luecha@gmail.com"
+    name: "John Doe - Developer"
+    email: "john@eazybank.com"
   onCallSupport:
-    - 091-234-5678
-    - 092-345-6789
+    - (555) 555-1234
+    - (555) 523-1345
