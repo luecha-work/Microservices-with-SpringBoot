@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to Workshop Spring-Boot related to Accounts related prod APIs"
+  contactDetails:
+    name: "Somchai rugna - Production Owner"
+    email: "somchai@gmail.com"
+  onCallSupport:
+    - 091-234-5678
+    - 092-345-6789
